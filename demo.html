@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Bootstrap tabs选项卡实现</title>
+<link rel="stylesheet" href="w_silder.css" type="text/css" />
+<script src="jquery-1.10.2.js" type="text/javascript"></script>
+<script src="jquery.w_silder.js" type="text/javascript"></script>
+  <style type="text/css" media="screen">
+  .content{
+    width: 960px;
+    margin: 0px auto;
+  } 
+  .subcontent{
+    margin-top: 100px;
+  }
+  </style>
+
+  <script type="text/javascript">
+  window.onload = function() {
+    var s = $("#test").w_silder({
+      yearNum: 5
+    });
+    $("#getP").click(function(){
+      alert(s.getPercent());
+    })
+    s.viewPercent = function (p) {
+      $("#pp").html(p)
+    }
+    
+  }
+</script>
+</head>
+<body>
+    <div id="test" style="width:960px;height:20px;margin:100px auto;"></div>
+    <input id="getP" type="button" value="获取百分比"/>
+    <p id="pp"></p>
+</body>
+</html>
